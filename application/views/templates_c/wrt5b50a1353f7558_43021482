@@ -1,0 +1,211 @@
+<?php
+/* Smarty version 3.1.32, created on 2018-07-19 17:33:25
+  from 'W:\domains\ci3\nails\application\views\templates\backend\default\account\groupaccount\add.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.32',
+  'unifunc' => 'content_5b50a1353f36d1_70257461',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'bf3048d78135d292c22a14e78f02a79fcb8370d2' => 
+    array (
+      0 => 'W:\\domains\\ci3\\nails\\application\\views\\templates\\backend\\default\\account\\groupaccount\\add.tpl',
+      1 => 1532010805,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:../../common/files_header.tpl' => 1,
+    'file:../../common/menuleft.tpl' => 1,
+    'file:../../common/menuprofile.tpl' => 1,
+    'file:../../common/files_footer.tpl' => 1,
+  ),
+),false)) {
+function content_5b50a1353f36d1_70257461 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_loadInheritance();
+$_smarty_tpl->inheritance->init($_smarty_tpl, true);
+?>
+
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_110355b50a1353d42c3_29653725', 'fileHeader');
+?>
+
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_175925b50a1353dbfc6_06129335', 'Page_breadcrumb');
+?>
+
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6575b50a1353dfe46_81278137', 'Page_content');
+?>
+
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_301985b50a1353e3cd2_95432433', 'menuLeft');
+?>
+
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_240555b50a1353e7b56_42538878', 'menuProfile');
+?>
+
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_297965b50a1353eb9d5_26061606', 'fileFooter');
+?>
+
+<?php 
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_140295b50a1353ef851_45739071', 'JSCodeArea');
+?>
+
+
+<?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, 'backend/default/common/layout.tpl');
+}
+/* {block 'fileHeader'} */
+class Block_110355b50a1353d42c3_29653725 extends Smarty_Internal_Block
+{
+public $subBlocks = array (
+  'fileHeader' => 
+  array (
+    0 => 'Block_110355b50a1353d42c3_29653725',
+  ),
+);
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
+
+	<?php $_smarty_tpl->_subTemplateRender("file:../../common/files_header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+}
+}
+/* {/block 'fileHeader'} */
+/* {block 'Page_breadcrumb'} */
+class Block_175925b50a1353dbfc6_06129335 extends Smarty_Internal_Block
+{
+public $subBlocks = array (
+  'Page_breadcrumb' => 
+  array (
+    0 => 'Block_175925b50a1353dbfc6_06129335',
+  ),
+);
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
+
+		<h1>
+		  Groups
+		  		</h1>
+		<ol class="breadcrumb">
+		  <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+		  <li><a href="#">Accounts</a></li>
+		  <li class="active">Groups</li>
+		</ol>
+<?php
+}
+}
+/* {/block 'Page_breadcrumb'} */
+/* {block 'Page_content'} */
+class Block_6575b50a1353dfe46_81278137 extends Smarty_Internal_Block
+{
+public $subBlocks = array (
+  'Page_content' => 
+  array (
+    0 => 'Block_6575b50a1353dfe46_81278137',
+  ),
+);
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
+
+				<!-- Default box -->
+		<div class="box">
+		  <div class="box-header with-border">
+		    <h3 class="box-title">Add Group </h3>
+
+		    <div class="box-tools pull-right">
+		      <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+		        <i class="fa fa-minus"></i></button>
+		      <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+		        <i class="fa fa-times"></i></button>
+		    </div>
+		  </div>
+		  <div class="box-body">
+		  	
+		  </div>
+		  <!-- /.box-body -->
+		  <div class="box-footer">
+		    		  </div>
+		  <!-- /.box-footer-->
+		</div>
+		<!-- /.box -->
+<?php
+}
+}
+/* {/block 'Page_content'} */
+/* {block 'menuLeft'} */
+class Block_301985b50a1353e3cd2_95432433 extends Smarty_Internal_Block
+{
+public $subBlocks = array (
+  'menuLeft' => 
+  array (
+    0 => 'Block_301985b50a1353e3cd2_95432433',
+  ),
+);
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:../../common/menuleft.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+}
+}
+/* {/block 'menuLeft'} */
+/* {block 'menuProfile'} */
+class Block_240555b50a1353e7b56_42538878 extends Smarty_Internal_Block
+{
+public $subBlocks = array (
+  'menuProfile' => 
+  array (
+    0 => 'Block_240555b50a1353e7b56_42538878',
+  ),
+);
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:../../common/menuprofile.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+}
+}
+/* {/block 'menuProfile'} */
+/* {block 'fileFooter'} */
+class Block_297965b50a1353eb9d5_26061606 extends Smarty_Internal_Block
+{
+public $subBlocks = array (
+  'fileFooter' => 
+  array (
+    0 => 'Block_297965b50a1353eb9d5_26061606',
+  ),
+);
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender("file:../../common/files_footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+}
+}
+/* {/block 'fileFooter'} */
+/* {block 'JSCodeArea'} */
+class Block_140295b50a1353ef851_45739071 extends Smarty_Internal_Block
+{
+public $subBlocks = array (
+  'JSCodeArea' => 
+  array (
+    0 => 'Block_140295b50a1353ef851_45739071',
+  ),
+);
+public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
+?>
+
+	<?php echo '<script'; ?>
+ type="text/javascript">
+		// $(document).ready(function() {
+		//     $('#example').DataTable();
+		// } );
+		$(document).ready(function() {
+      $('#datalist').DataTable( {
+      		paging: true,          
+        })
+      } );
+  
+	<?php echo '</script'; ?>
+>
+<?php
+}
+}
+/* {/block 'JSCodeArea'} */
+}

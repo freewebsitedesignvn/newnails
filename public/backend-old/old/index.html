@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+
+	<style type="text/css">
+		/*.bg{border:1px solid red;}*/
+	</style>
+	<title></title>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<header class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bg" style="">
+				<div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
+					Logo + Title
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+					<ul>
+						<li><a href=""><i class="fas fa-user"></i> Profile</a></li>
+						<li><a href=""><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+					</ul>
+				</div>
+				
+			</header>
+		</div>
+		<div class="row">
+			<nav class="col-xs-12 col-sm-4 col-md-3 col-lg-2 bg">
+				<div id="cssmenu">
+				  <ul>
+				     <li class="active"><a href="#" target="_blank"><span><i class="fa fa-fw fa-home"></i> Home</span></a></li>
+				     <li class="has-sub"><a href="#"><span><i class="fa fa-fw fa-bars"></i> Menus</span></a>
+				        <ul>
+				           <li class="has-sub"><a href="#"><span>Menu 1</span></a>
+				              <ul>
+				                 <li><a href="#"><span>Menu 1.1</span></a></li>
+				                 <li><a href="#"><span>Menu 1.2</span></a></li>
+				              </ul>
+				           </li>
+				           <li><a href="#"><span>Menu 2</span></a></li>
+				        </ul>
+				     </li>
+				     <li><a href="#"><span><i class="fa fa-fw fa-cog"></i> Settings</span></a></li>
+				     <li><a href="#"><span><i class="fa fa-fw fa-phone"></i> Contact</span></a></li>
+				  </ul>
+				</div>
+			</nav>
+			<section class="col-xs-12 col-sm-8 col-md-9 col-lg-10 bg">
+				Content
+			</section>
+		</div>
+		<div class="row">
+			<footer class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bg">
+				footer
+			</footer>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$('#cssmenu li.active').addClass('open').children('ul').show(); 
+		$('#cssmenu li.has-sub>a').on('click', function(){
+		  $(this).removeAttr('href');
+		  var element = $(this).parent('li');
+		  if (element.hasClass('open')) {
+		    element.removeClass('open');
+		    element.find('li').removeClass('open');
+		    element.find('ul').slideUp();
+		  }
+		  else {
+		    element.addClass('open');
+		    element.children('ul').slideDown();
+		    element.siblings('li').children('ul').slideUp();
+		    element.siblings('li').removeClass('open');
+		    element.siblings('li').find('li').removeClass('open');
+		    element.siblings('li').find('ul').slideUp();
+		  }
+		});
+
+		$('#cssmenu>ul>li.has-sub>a').append('<span class="holder"></span>');
+
+		(function getColor() {
+		  var r, g, b;
+		  var textColor = $('#cssmenu').css('color');
+		  textColor = textColor.slice(4);
+		  r = textColor.slice(0, textColor.indexOf(','));
+		  textColor = textColor.slice(textColor.indexOf(' ') + 1);
+		  g = textColor.slice(0, textColor.indexOf(','));
+		  textColor = textColor.slice(textColor.indexOf(' ') + 1);
+		  b = textColor.slice(0, textColor.indexOf(')'));
+		  var l = rgbToHsl(r, g, b);
+		  if (l > 0.7) {
+		    $('#cssmenu>ul>li>a').css('text-shadow', '0 1px 1px rgba(0, 0, 0, .35)');
+		    $('#cssmenu>ul>li>a>span').css('border-color', 'rgba(0, 0, 0, .35)');
+		  }
+		  else
+		  {
+		    $('#cssmenu>ul>li>a').css('text-shadow', '0 1px 0 rgba(255, 255, 255, .35)');
+		    $('#cssmenu>ul>li>a>span').css('border-color', 'rgba(255, 255, 255, .35)');
+		  }
+		})();
+
+		function rgbToHsl(r, g, b) {
+		    r /= 255, g /= 255, b /= 255;
+		    var max = Math.max(r, g, b), min = Math.min(r, g, b);
+		    var h, s, l = (max + min) / 2;
+
+		    if(max == min){
+		        h = s = 0;
+		    }
+		    else {
+		        var d = max - min;
+		        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+		        switch(max){
+		            case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+		            case g: h = (b - r) / d + 2; break;
+		            case b: h = (r - g) / d + 4; break;
+		        }
+		        h /= 6;
+		    }
+		    return l;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+%resetmenu{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+%lv1Active{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+%lv2Active{
+  background: #424852;
+  color: #ffffff;
+}
+%holder{
+  display: block;
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  right: 20px;
+  z-index: 10;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+%l1ActiveSpan{
+  border-color: #eeeeee;
+
+}
+#cssmenu{
+  @extend %resetmenu;
+  width: 200px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  ul{
+    @extend %resetmenu;
+    li{
+      @extend %resetmenu;
+      a{
+        @extend %resetmenu;
+        &:hover{
+          
+        }
+      }
+
+    }
+    ul{
+      display: none;
+      li{
+        a{
+          cursor: pointer;
+          border-bottom: 1px solid #32373e;
+          border-left: 1px solid #32373e;
+          border-right: 1px solid #32373e;
+          padding: 10px 20px;
+          z-index: 1;
+          text-decoration: none;
+          font-size: 13px;
+          color: #eeeeee;
+          background: #49505a;
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+        &:hover{
+          >a{
+            @extend %lv2Active;
+          }
+        }
+        &.open{
+          >a{
+            @extend %lv2Active;
+          }
+        }
+        &.active{
+          >a{
+            @extend %lv2Active;
+          }
+        }
+        &:first-child{
+          >a{
+            box-shadow: none;
+          }
+        }
+        &.has-sub{
+          >a{
+            &a::after{
+               display: block;
+              position: absolute;
+              content: "";
+              width: 5px;
+              height: 5px;
+              right: 20px;
+              z-index: 10;
+              top: 11.5px;
+              border-top: 2px solid #eeeeee;
+              border-left: 2px solid #eeeeee;
+              -webkit-transform: rotate(-135deg);
+              -moz-transform: rotate(-135deg);
+              -ms-transform: rotate(-135deg);
+              -o-transform: rotate(-135deg);
+              transform: rotate(-135deg);
+            }
+          }
+        }
+        &.active{
+          >a{
+            &::after{
+              border-color: #ffffff;
+            }
+          }
+          
+        }
+        &.open{
+          >a{
+            &::after{
+              border-color: #ffffff;
+            }
+          }
+
+        }
+        >a{
+          &:hover{
+            &::after{
+              border-color: #ffffff;
+            }
+          }
+        }
+      }
+      ul{
+        ul{
+          li{
+            &:first-child{
+              >a{
+                box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+              }
+            }
+            a{
+              padding-left: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &>ul{
+    &>li{
+      &.last{
+        >a{
+          border-bottom: 1px solid #1682ba;            
+        }
+      }
+      &:last-child{
+        >a{
+          border-bottom: 1px solid #1682ba;
+        }
+      }
+      &.active{
+        >a{
+          @extend %lv1Active;
+          span{
+            &::after{
+              @extend %l1ActiveSpan;
+            }
+          }
+        }
+        &>ul{
+          display: block;
+        }
+      }
+      &.open{
+        >a{            
+          @extend %lv1Active;
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.15);
+          border-bottom: 1px solid #1682ba;
+          span{
+            &::after{
+              @extend %l1ActiveSpan;
+            }
+          }
+        }
+      }
+      &>a{
+        padding: 15px 20px;
+        border-left: 1px solid #1682ba;
+        border-right: 1px solid #1682ba;
+        border-top: 1px solid #1682ba;
+        cursor: pointer;
+        z-index: 2;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #ffffff;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+        background: #36aae7;
+        background: -webkit-linear-gradient(#36aae7, #1fa0e4);
+        background: -moz-linear-gradient(#36aae7, #1fa0e4);
+        background: -o-linear-gradient(#36aae7, #1fa0e4);
+        background: -ms-linear-gradient(#36aae7, #1fa0e4);
+        background: linear-gradient(#36aae7, #1fa0e4);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        &:hover{
+          @extend %lv1Active;
+          &>span{
+            &::after{
+             @extend %l1ActiveSpan;
+
+            }
+          }
+        }
+      }
+      >ul{
+        >li{
+          &:last-child{
+            >a{
+              border-bottom: 0;
+            }
+          }
+          &.last{
+            >a{
+              border-bottom: 0;
+            }
+          }
+          &.open{
+            &:last-child{
+              >a{
+                border-bottom: 1px solid #32373e;
+              }
+              >ul{
+                >li{
+                  &:last-child{
+                    >a{
+                      border-bottom: 0;
+                    }
+                  }
+
+                }
+              }
+            }
+            &.last{
+              >a{
+                border-bottom: 1px solid #32373e;
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
+
+.align-right{
+  float: right;
+}
+.holder{
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  &::before{
+    @extend %holder;
+    top: 18px;
+    border-top: 2px solid;
+    border-left: 2px solid;
+    border-top-color: inherit;
+    border-left-color: inherit;
+  }
+  &::after{
+    @extend %holder;
+    top: 17px;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+  }
+}

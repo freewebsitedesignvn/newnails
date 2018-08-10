@@ -1,0 +1,1 @@
+<div id="notification" style="display: block;"><div class="notificationtop">SUMMER FRIENDSHIP SUPER DEALS! GET YOURSELF PRETTY FOR THE BEACH!<a href="http://imperialsalonanddayspa.com/promotions" target="_blank">Get Deal</a></div></div>
