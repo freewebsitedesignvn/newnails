@@ -3,7 +3,7 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 class Gallery extends CI_Controller {
 
-    public $page='trangchu';
+    public $page='Gallery';
     
     function __construct() {
         parent::__construct();        
