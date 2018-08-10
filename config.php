@@ -1,5 +1,5 @@
 <?php 
-	$server=0;
+	$server=1;
 	//define('BASE_URL','http://'.$_SERVER['SERVER_NAME'].'/vinasing/php/');
 	//define('DOMAIN',BASE_URL.'index.php/');
 	if ($server){//Up lên server
