@@ -3,7 +3,7 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 class Contact extends CI_Controller {
 
-    public $page='trangchu';
+    public $page='Contact';
     
     function __construct() {
         parent::__construct();        
