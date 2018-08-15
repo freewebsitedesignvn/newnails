@@ -31,6 +31,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
   <!-- jQuery 3 -->
 <script src="<?php echo PATH_BE_TEMP ?>bower_components/jquery/dist/jquery.min.js"></script>
+<!-- <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script> -->
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> -->
   
     <!-- <script src="<?php echo base_url()?>js/ajaxfileupload.js"></script> -->

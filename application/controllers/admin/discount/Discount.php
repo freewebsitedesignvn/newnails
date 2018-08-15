@@ -25,6 +25,9 @@ class Discount extends CI_Controller {
 		$this->currentControl='admin/discount/discount/';
 		$this->DirPhoto='upload/promotion/';
 
+		echo $this->router->fetch_class();
+		echo $this->router->fetch_method();
+
 	}
 	public function index()
 	{
@@ -68,11 +71,12 @@ class Discount extends CI_Controller {
 			'data'=>$dataout,
 			);
 		$this->load->view($this->viewLayout,$data);
-
+		
 	}
 
 	public function listpromotionadd($type)
 	{
+		
 		$dataout=array();
 		$this->load->model('Promotionfiles_model','prophoto');
 		// $this->myclass->indulieu($this->cate->getList());die();
@@ -94,7 +98,7 @@ class Discount extends CI_Controller {
 				'DirPhoto'=>$this->DirPhoto,
 				),
 			'selectPhoto'=>$this->prophoto->getList(),
-			'temp'=>$this->viewPath.'addpromotion.php',
+			'temp'=>$this->viewPath.'addpromotionnew.php',
 			// 'data'=>$dataout,
 			);
 		// $config = array(
